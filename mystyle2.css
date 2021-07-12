@@ -1,0 +1,8 @@
+:root {
+    --header-font-color: black;
+    --header-background-color: white;
+    --aside-background-color: rgb(217, 233, 146);
+    --main-background-color: rgb(126, 114, 231);
+    --header-height: 2rem;
+    --header-padding: 5rem;
+}

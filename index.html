@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>awesome sites</title>
+</head>
+<body>
+    <header>
+        <h1>Awesome css var website</h1>
+        <select id="theme-switch" class="select-css">
+            <option value="style1">style1</option>
+            <option value="style2">style2</option>
+        </select>
+    </header>
+    <aside></aside>
+    <main></main>
+
+    <script>
+        const link = document.createElement('link'); 
+        const head = document.getElementsByTagName('head')[0]; 
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './mystyle2.css';
+        link.media = 'all';
+        document.getElementById('theme-switch').addEventListener('change', (event)=>{
+            if(event.target.value === 'style2'){
+                head.appendChild(link);
+            } else {
+                head.removeChild(link);
+            }
+        })
+    </script>
+</body>
+</html>
